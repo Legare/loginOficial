@@ -2,7 +2,16 @@
 <?php
 
 function validaAutenticacao($link,$tipo)
-{   echo '<meta charset=UTF-8>';
+        
+{   
+    
+    if ($tipo === 'ADM'){
+        include_once '../classes/bcrypt.class';
+    }
+    else{
+        include_once 'classes/bcrypt.class';
+    }
+    echo '<meta charset=UTF-8>';
     session_start();
     
     if(!isset($_SESSION['email']) or !isset($_SESSION['senha']))
@@ -32,7 +41,7 @@ function validaAutenticacao($link,$tipo)
         $query = "SELECT * FROM usuario WHERE EMAIL_USUARIO = '$email'";
         $result = mysql_query($query);
         $usuarios = mysql_fetch_array($result);
-        if($email !== $usuarios['EMAIL_USUARIO'])
+        if($email !== $usuarios[4])
         {
             session_destroy();
             echo '<script type="text/javascript">
@@ -40,7 +49,8 @@ function validaAutenticacao($link,$tipo)
         echo '<script type="text/javascript">
               location.href = "'.$link.'"
              </script>';
-        }elseif($senha !== $usuarios['SENHA_USUARIO'])
+        }elseif (Bcrypt::check($senha != $usuarios[3],$senha))
+        //}elseif($senha !== $usuarios[3])
         {
             session_destroy();
             echo '<script type="text/javascript">
