@@ -26,7 +26,7 @@ if($totalUsuario === 0){
     //echo $tipoUsuario;
     //$tipoUsuario = $array['TIPO_USUARIO'];
     //echo $senhaUsuario . '<br/>';
-    if(Bcrypt::check($senha != $senhaUsuario,$senhaUsuario))
+   if(Bcrypt::check($senha != $senhaUsuario,$senhaUsuario))
     //if($senha != $senhaUsuarioCriptografada)
     {
         echo 'Senha não confere !';
