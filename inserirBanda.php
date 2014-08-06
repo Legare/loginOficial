@@ -4,7 +4,7 @@ include_once 'classes/Bcrypt.class';
 include_once 'conexao/conecta.inc';
 $banda = $_POST['banda'];
 $senha = $_POST['senhabanda'];
-$email =  $_POST['senhabanda'];
+$email =  $_POST['emailbanda'];
 $genero =  $_POST['genero'];
 $tipoUsuario= 'BAN';
 $senha = Bcrypt::hash($senha);
