@@ -31,9 +31,17 @@
                <option value="asian"> Asian</option>
                <option value="black"> Black</option>
                <option value="eletronica"> Eletrônica</option>
+               <option value="forro"> Forró</option>
+               <option value="funk"> Funk</option>
                <option value="gospel"> Gospel</option>
+               <option value="hiphop"> Hip Hop</option
+               <option value="indie"> Indie</option>
+               <option value="pagode"> Pagode</option>
                <option value="rap"> Rap</option>
                <option value="reggae"> reggae</option>
+               <option value="rock"> Rock</option>
+               <option value="samba"> Samba</option>
+               <option value="sertanejo"> Sertanejo</option>
                <option value="outros"> outros</option>
                
                
