@@ -19,14 +19,14 @@ if($totalUsuario === 0){
     //Recuperando a senha do usuario
     $array = mysql_fetch_array($result);
     $senhaUsuario = $array[3];
-    $senhaUsuarioCriptografada = Bcrypt::hash($senhaUsuario);
+    //$senhaUsuarioCriptografada = Bcrypt::hash($senhaUsuario);
     //echo $senhaUsuario .'<br>';
     //$senhaUsuario = $array[SENHA_USUARIO'];
     $tipoUsuario = $array[8];
     //echo $tipoUsuario;
     //$tipoUsuario = $array['TIPO_USUARIO'];
     //echo $senhaUsuario . '<br/>';
-   if(Bcrypt::check($senha != $senhaUsuario,$senhaUsuario))
+   if(!Bcrypt::check($senha,$senhaUsuario))
     //if($senha != $senhaUsuarioCriptografada)
     {
         echo 'Senha não confere !';
