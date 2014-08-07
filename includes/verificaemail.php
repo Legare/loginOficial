@@ -5,7 +5,7 @@ $email = $_GET['login'];
 $server   = 'localhost';
 $user     = 'root';
 $password = '12345678';
-$database = 'banco';
+$database = 'legare';
 
 // Estabelecendo a conexão, selecionando o banco de dados e executando a query
 $connection  = mysql_connect($server,$user,$password);
