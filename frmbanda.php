@@ -44,7 +44,6 @@
                <option value="sertanejo"> Sertanejo</option>
                <option value="outros"> outros</option>
                
-               
                 </select>
 		<br />
                 
