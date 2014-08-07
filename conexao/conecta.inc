@@ -4,7 +4,7 @@ echo '<meta charset=utf-8>';
 $server = 'localhost';
 $user = 'root';
 $password = '12345678';
-$database = 'banco';
+$database = 'legare';
 
 //Estabelendo a conexão
 $connection = mysql_connect($server,$user,$password);
