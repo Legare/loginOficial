@@ -49,7 +49,8 @@ function validaAutenticacao($link,$tipo)
         echo '<script type="text/javascript">
               location.href = "'.$link.'"
              </script>';
-        }elseif (Bcrypt::check($senha != $usuarios[3],$senha))
+              }elseif (!Bcrypt::check($senha, $usuarios[3]))
+        //}elseif (Bcrypt::check($senha != $usuarios[3],$senha))
         //}elseif($senha !== $usuarios[3])
         {
             session_destroy();
